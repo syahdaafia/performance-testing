@@ -1,22 +1,24 @@
-# 🚀 Performance Testing - Restful Booker API dengan K6  
+# 🚀 **Performance Testing - _Restful Booker API_ dengan K6**  
 
-Repositori ini berisi pengujian kinerja API **Restful Booker** menggunakan **K6**. Pengujian ini mencakup berbagai skenario seperti **Load Test, Stress Test, Spike Test, Endurance Test**, dan **Breakpoint Test**.  
+Repositori ini berisi pengujian kinerja **_Restful Booker API_** menggunakan **K6**. Pengujian ini mencakup berbagai skenario seperti **_Load Test, Stress Test, Spike Test, Endurance Test,_** dan **_Breakpoint Test_**.  
 
-## 📌 Deskripsi Proyek  
+🔗 **API Contract**: [_Restful Booker API Documentation_](https://restful-booker.herokuapp.com/apidoc/index.html)  
 
-Tujuan dari proyek ini adalah untuk mengevaluasi performa API **Restful Booker** dengan berbagai skenario pengujian. K6 digunakan untuk mengukur responsivitas, stabilitas, dan kehandalan API dalam berbagai kondisi beban.  
+## 📌 **Deskripsi Proyek**  
 
-### 🔍 Jenis Pengujian yang Dilakukan  
+Tujuan dari proyek ini adalah untuk mengevaluasi performa **_Restful Booker API_** dengan berbagai skenario pengujian. **K6** digunakan untuk mengukur **responsivitas, stabilitas, dan kehandalan API** dalam berbagai kondisi beban.  
 
-| Jenis Pengujian  | Deskripsi |
-|------------------|-----------|
-| **Load Test**    | Menguji API dengan beban normal hingga tinggi dalam waktu tertentu. |
-| **Stress Test**  | Meningkatkan jumlah pengguna hingga API mencapai batasnya. |
-| **Spike Test**   | Menguji API dengan lonjakan trafik tiba-tiba. |
-| **Endurance Test** | Menguji API dengan beban konstan dalam waktu lama. |
-| **Breakpoint Test** | Menentukan titik di mana API mulai mengalami degradasi performa. |
+### 🔍 **Jenis Pengujian yang Dilakukan**  
 
-## 📂 Struktur Proyek  
+| **Jenis Pengujian**  | **Deskripsi** |
+|----------------------|--------------|
+| **_Load Test_**      | Menguji API dengan beban normal hingga tinggi dalam waktu tertentu. |
+| **_Stress Test_**    | Meningkatkan jumlah pengguna hingga API mencapai batasnya. |
+| **_Spike Test_**     | Menguji API dengan lonjakan trafik tiba-tiba. |
+| **_Endurance Test_** | Menguji API dengan beban konstan dalam waktu lama. |
+| **_Breakpoint Test_** | Menentukan titik di mana API mulai mengalami degradasi performa. |
+
+## 📂 **Struktur Proyek**  
 
 ```
 📂 k6-performance-testing  
@@ -34,19 +36,15 @@ Tujuan dari proyek ini adalah untuk mengevaluasi performa API **Restful Booker**
     ├── 📄 breakPoint.html  
 ```
 
-## ⚙️ Cara Menjalankan Pengujian  
+## ⚙️ **Cara Menjalankan Pengujian**  
 
-### 1️⃣ Persiapan  
-Pastikan **K6** sudah terinstal di sistem lokal: 
-https://grafana.com/docs/k6/latest/set-up/install-k6/
+### 1️⃣ **Persiapan**  
+Pastikan **K6** sudah terinstal di sistem lokal:  
+🔗 [Panduan Instalasi K6](https://grafana.com/docs/k6/latest/set-up/install-k6/)  
 
 - **Windows**:  
   ```sh
-  choco install k6
-  ```
-  atau
-  ```sh
- winget install k6 --source winget
+  winget install k6 --source winget
   ```
 - **MacOS**:  
   ```sh
@@ -57,55 +55,51 @@ https://grafana.com/docs/k6/latest/set-up/install-k6/
   sudo apt install k6
   ```
 
-### 2️⃣ Clone Repositori  
+### 2️⃣ **Clone Repositori**  
 Clone repositori ke sistem lokal:  
 ```sh
 git clone https://github.com/username/k6-performance-testing.git
 cd k6-performance-testing
 ```
 
-### 3️⃣ Jalankan Pengujian  
+### 3️⃣ **Jalankan Pengujian**  
 Gunakan perintah berikut untuk menjalankan pengujian:  
 
-- **Load Test**  
+- **_Load Test_**  
   ```sh
   k6 run loadTest.js
   ```
-- **Stress Test**  
+- **_Stress Test_**  
   ```sh
   k6 run stressTest.js
   ```
-- **Spike Test**  
+- **_Spike Test_**  
   ```sh
   k6 run spikeTest.js
   ```
-- **Endurance Test**  
+- **_Endurance Test_**  
   ```sh
   k6 run enduranceTest.js
   ```
-- **Breakpoint Test**  
+- **_Breakpoint Test_**  
   ```sh
   k6 run breakPoint.js
   ```
 
-## 📊 Laporan Hasil Pengujian  
+## 📊 **Laporan Hasil Pengujian**  
 
 Setelah pengujian selesai, laporan dalam format **HTML** akan tersedia di folder `reports/`.  
 
-| Jenis Pengujian  | Lokasi Laporan |
-|------------------|----------------|
-| **Load Test**    | `reports/loadTest.html` |
-| **Stress Test**  | `reports/stressTest.html` |
-| **Spike Test**   | `reports/spikeTest.html` |
-| **Endurance Test** | `reports/enduranceTest.html` |
-| **Breakpoint Test** | `reports/breakPoint.html` |
+| **Jenis Pengujian**  | **Lokasi Laporan** |
+|----------------------|------------------|
+| **_Load Test_**      | `reports/loadTest.html` |
+| **_Stress Test_**    | `reports/stressTest.html` |
+| **_Spike Test_**     | `reports/spikeTest.html` |
+| **_Endurance Test_** | `reports/enduranceTest.html` |
+| **_Breakpoint Test_** | `reports/breakPoint.html` |
 
-Untuk membuka laporan, cukup buka file HTML dengan browser.  
+Untuk membuka laporan, cukup buka file **HTML** dengan browser.  
 
-## 📌 Catatan Tambahan  
-- Pastikan koneksi internet stabil untuk menjalankan pengujian terhadap API.  
-- Kustomisasi jumlah pengguna virtual dan durasi pengujian dapat dilakukan di dalam setiap file `.js`.  
-- Jika ingin menyimpan hasil pengujian dalam format JSON, gunakan perintah:  
-  ```sh
-  k6 run loadTest.js --out json=reports/loadTest.json
-  ```
+## 📌 **Catatan Tambahan**  
+- Pastikan koneksi internet stabil untuk menjalankan pengujian terhadap **_Restful Booker API_**.  
+- Kustomisasi jumlah **_Virtual Users (VUs)_** dan durasi pengujian dapat dilakukan di dalam setiap file `.js`.  
